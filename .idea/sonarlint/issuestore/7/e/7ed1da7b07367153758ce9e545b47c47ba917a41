@@ -1,7 +1,7 @@
 
-l
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Æ‹ïú8æ­é1
-X
-java:S6437"6Revoke and change this password, as it is compromised.(ĞÖÒüÿÿÿÿ8ñ­é1
-L	java:S106"+Replace this use of System.out by a logger.(ÙŠõûÿÿÿÿ8È­é1
-L	java:S106"+Replace this use of System.out by a logger.(ØÍàÙøÿÿÿÿ8Ê­é1
+’
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Æ‹ïú8¯’Üê1J$f6d4edf8-dfa2-4b07-9429-2df239fcc862
+K
+java:S2115")Add password protection to this database.(ĞÖÒüÿÿÿÿ8®‡îÆê1
+r	java:S106!"+Replace this use of System.out by a logger.(ÙŠõûÿÿÿÿ8Õ’Üê1J$58c6b2fc-0b07-48fd-a6c7-0ee5f5172c7f
+r	java:S106#"+Replace this use of System.out by a logger.(ØÍàÙøÿÿÿÿ8Ù’Üê1J$847dadab-4c78-44a3-96c7-05d510674449

@@ -7,22 +7,26 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class TableInitializer {
+
   public static void main(String[] args) {
-    String url = "jdbc:mysql://localhost:3306/your_database";
-    String user = "your_username";
-    String password = "your_password";
+    String url = "jdbc:mysql://localhost:3306/database";
+    String user = "";
+    String password = "";
 
     int numberOfRecords = 50;
 
     try (Connection conn = DriverManager.getConnection(url, user, password)) {
       Faker faker = new Faker();
-      String sql = "INSERT INTO your_table (column1, column2, ...) VALUES (?, ?, ...)";
+      String sql = "INSERT INTO users (first_name, last_name, email, age, gender, country) VALUES (?, ?, ?, ?, ?, ?)";
       PreparedStatement statement = conn.prepareStatement(sql);
 
       for (int i = 0; i < numberOfRecords; i++) {
         statement.setString(1, faker.name().firstName());
         statement.setString(2, faker.name().lastName());
-        // Set other columns as needed
+        statement.setString(3, faker.internet().emailAddress());
+        statement.setInt(4, faker.number().numberBetween(18, 80));
+        statement.setString(5, faker.demographic().sex());
+        statement.setString(6, faker.country().name());
         statement.executeUpdate();
       }
 
